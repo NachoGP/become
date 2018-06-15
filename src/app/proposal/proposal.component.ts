@@ -17,6 +17,7 @@ isActive = false;
 tipo:any;
 prop1:any;
 prop2:any;
+tiempo:any;
 // guardarPropuesta1:any
 
 // guardarPropuesta2:any
@@ -32,27 +33,25 @@ activeButton() {
     .then( (res) => {
       // console.log(res.json())
       this.arrayPropuesta1 = res.json();
-
     })
     this.propuesta2.pedirPropuesta2()
     .then( (res) => {
       // console.log(res.json())
       this.arrayPropuesta2 = res.json();
-
     })
 
   }
 
-  
-
   guardarPropuesta(){
     
     this.prop1 = {
+      tiempo: this.tiempo,
       tipo: 'propuesta1',
       objeto: this.arrayPropuesta1
     }
 
     this.prop2 = {
+      tiempo: this.tiempo,
       tipo: 'propuesta2',
       objeto: this.arrayPropuesta2
     }

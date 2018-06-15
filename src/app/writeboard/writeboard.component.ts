@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class WriteboardComponent implements OnInit {
 
   propuesta: any
-
+tiempo:any;
 
   constructor(private propuesta1: RelatoservicesService, private propuesta2: RelatoservicesService) { }
 
@@ -17,5 +17,8 @@ export class WriteboardComponent implements OnInit {
     
       this.propuesta = JSON.parse(localStorage.getItem('propuesta'));
        console.log(this.propuesta.tipo);
+
+       this.tiempo = JSON.parse(localStorage.getItem('tiempo'));
+       console.log(this.propuesta.tiempo); 
   }
 }

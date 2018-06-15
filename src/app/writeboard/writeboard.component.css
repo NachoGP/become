@@ -82,13 +82,10 @@ img.lateral-image{
   border: 1px solid  #b465a7;
   border-radius: 2px;
  }
- .zoom:after{
-  
-}
  .zoom {      
-  -webkit-transition: all 0.35s ease-in-out;    
-  -moz-transition: all 0.35s ease-in-out;    
-  transition: all 0.35s ease-in-out;     
+  -webkit-transition: all 0.45s ease-in-out;    
+  -moz-transition: all 0.45s ease-in-out;    
+  transition: all 0.45s ease-in-out;     
   cursor: -webkit-zoom-in;      
   cursor: -moz-zoom-in;      
   cursor: zoom-in;  
@@ -99,12 +96,11 @@ img.lateral-image{
 .zoom:focus {
 /**adjust scale to desired size, 
 add browser prefixes**/
--ms-transform: scale(1.5);  
--moz-transform: scale(1.5);  
--webkit-transform: scale(1.5);  
--o-transform: scale(1.5);  
-transform: scale(1.5);  
-translate:(150px,0);  
+-ms-transform: scale(1.1);  
+-moz-transform: scale(1.1);  
+-webkit-transform: scale(1.1);  
+-o-transform: scale(1.1);  
+transform: scale(1.1);   
 position:relative;      
 z-index:100; 
 
