@@ -1,0 +1,22 @@
+{
+    "usuario":  [
+        {
+            "id": 1,
+            "username": "ignacio",
+            "password": "neoland",
+            "repeatpassword": "neoland",
+            "country": "España",
+            "city": "Madrid"
+        },
+        {
+            "id": 2,
+            "username": "mario",
+            "password": "neoland",
+            "repeatpassword": "neoland",
+            "country": "España",
+            "city": "Barcelona"
+        }
+    ]
+   
+}
+    

@@ -1,0 +1,16 @@
+footer{
+   padding: 10%;
+   margin: 1em;
+
+}
+ul.list-inline.quicklinks.quicklinks, span{
+font-size: 10px;
+color: #BD10E0;
+display: flex;
+justify-content: center;
+line-height: 45px
+}
+
+.fa{
+   margin: 1em ;
+}

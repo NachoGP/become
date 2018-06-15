@@ -1,0 +1,94 @@
+header.masthead .intro-text {
+    padding-top: 230px;
+    padding-bottom: 100px;
+}
+
+header.masthead {
+    text-align: center;
+    color: #fff;
+    background:  var(--main-background-deg);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+header.masthead .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+    color: #484848;
+    padding: .5em 2.5em;
+}
+
+.btn-primary:hover {
+   background-color:transparent;
+   color: #f0f0f0;
+}
+
+header.masthead .intro-text .intro-lead-in {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+header.masthead .intro-text .intro-heading {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    padding: 3%;
+}
+
+ul {
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar-collapse li a{
+   margin: 0 2em;
+}
+
+.navbar-collapse li a img{
+   width: 200px;
+   position: relative;
+   top:-30px;
+}
+.top-head{
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+
+}
+/* header.masthead .intro-text .intro-heading span{
+   border-left: 1px solid #484848;
+   animation: maquina 5s infinite alternate steps(44);
+}
+@keyframes maquina {
+   from{
+      width:100%;
+   }
+   to{
+      width:0;
+   }
+} */
+
+
+

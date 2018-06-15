@@ -1,0 +1,79 @@
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark top-head" id="mainNav">
+      <div class="container">
+        <div class="navbar-collapse" id="navbarResponsive">
+            <img class="proposal" src="../../assets/img/logo-be.png" alt="">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link  text-uppercase" [routerLink]="['/main']">LOG-OUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="submit">
+            <div class="intro-heading writing">Selecciona una propuesta, por favor:</div>
+            <div class="proposals-container">
+            
+            <section [ngClass]="{'active': isActive}" class="form-signin square-form animated fadeIn propose-square">
+                <h2 class="proposalnumber">1</h2>
+              <article class="first-columna">
+                <div class="rand1">
+              <h2 class="form-signin-heading pro-headings">GÉNERO:</h2>
+              <p class="propose"> {{arrayPropuesta1.genero}}</p>
+            </div>
+              <hr>
+              <div class="rand1">
+              <h2 class="form-signin-heading pro-headings">PERSONAJE:</h2>
+              <p  class="propose"> {{arrayPropuesta1.personaje}}</p>
+              </div>
+              <hr>
+              <div class="rand1">
+              <h2 class="form-signin-heading pro-headings">SUSTANTIVO:</h2>
+              <p class="propose"> {{arrayPropuesta1.sustantivo}}</p>
+              </div>
+              <hr>
+              <div class="rand1">
+              <h2 class="form-signin-heading pro-headings">TEMA:</h2>
+              <p class="propose"> {{arrayPropuesta1.tema}}</p>
+              </div>
+              <hr>
+              <div class="rand1">
+              <h2 class="form-signin-heading pro-headings">LUGAR:</h2>
+              <p class="propose"> {{arrayPropuesta1.localizacion}}</p>
+              </div>
+              <hr>
+
+              </article>
+              <button (click)="activeButton()" class="btn btn-lg btn-block" id="selected-button" type="submit">SELECCIONAR</button>
+            </section>
+
+            <section [ngClass]="{'active': !isActive}" class="form-signin square-form animated fadeIn col-12 prop-2">
+                <h2 class="proposalnumber">2</h2>
+                <article class="first-columna"> 
+                <h2 class="form-signin-heading pro-headings"></h2>
+                      <p class="propose">{{arrayPropuesta2.completa}}</p>
+                      <p  *ngIf="arrayPropuesta2.imagen !== null" class="propose prop-img zoom"><img [src]="arrayPropuesta2.imagen" ></p>
+                </article>
+                <button (click)="activeButton()" class="btn btn-lg btn-block selection-button button-2 col-12" id="selected-button" type="submit">SELECCIONAR</button>
+              </section>
+          </div>
+          <div class="clear-fix"></div>
+  
+        
+              <div class="button-sel col-8 animated fadeIn slow">
+                <button (click) = "guardarPropuesta()" class="btn btn-block" type="submit"> COMENZAR</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </header>

@@ -1,0 +1,19 @@
+#map{
+   padding-bottom: 5%;
+}
+
+.map{
+   width: 100%;
+   background: blueviolet;
+   opacity: 0.55;
+   
+}
+.back-deg{
+   background: var(--main-background-deg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.rules{
+   color: #f2f2f2;
+}

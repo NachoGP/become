@@ -1,0 +1,78 @@
+<body id="page-top main-container">
+  <div class=" p-3 p-lg-5 d-flex flex-column ">
+    <div class=" pull-right">
+      <button class="btn btn-outline-primary col-2 col-xs-12 session-button pad" [routerLink]="['']">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeIn" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger">
+
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="../../assets/img/logo-be.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- [ngClass]="{'active': !isActive}" -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul  *ngIf="propuesta.tipo === 'propuesta1' " class="navbar-nav">
+        <h3 class="theme-proposal"> Tu Propuesta</h3>
+        <h4>GÉNERO:</h4>
+        <p class="theme-selector">{{propuesta.objeto.genero}}</p>
+        <h4>PERSONAJE:</h4>
+        <p class="theme-selector">{{propuesta.objeto.personaje}}</p>
+        <h4 >SUSTANTIVO:</h4>
+        <p class="theme-selector">{{propuesta.objeto.sustantivo}}</p>
+        <h4>LUGAR:</h4>
+        <p class="theme-selector">{{propuesta.objeto.localizacion}}</p>
+        <h4>TEMA:</h4>
+        <p class="theme-selector">{{propuesta.objeto.tema}}</p>
+      </ul>
+      <ul *ngIf="propuesta.tipo === 'propuesta2'" class="navbar-nav">
+        <h3 class="theme-proposal"> Tu Propuesta</h3>
+        <p class="theme-selector">{{propuesta.objeto.completa}}</p>
+        <p *ngIf="propuesta.objeto.imagen !== null" class=" propose prop-img zoom"><img class="lateral-image" [src]="propuesta.objeto.imagen" ></p>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <h3>BIENVENID@:</h3>
+        <div class="resume-date text-md-right">
+          <!-- timer -->
+          <div class="results row col-12">
+            <button class="btn btn-outline-primary rev" [routerLink]="['../newprofile']">MI AREA PRIVADA</button>
+            <button class="btn btn-outline-primary rev">Publica</button>
+            <button class="btn btn-outline-primary rev">GUARDAR</button>
+          </div>
+          <div class="timer-design pad">
+            <h3>14:59 min</h3>
+          </div>
+          <hr>
+        </div>
+        <section>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5 col-10">
+            <div class="resume-content">
+              <h3 class="mb-0">TITULO</h3>
+              <div class="subheading mb-3">
+                <div class="form-group purple-border">
+                  <div class="form-group shadow-textarea">
+                    <input class="form-control z-depth-1" id="exampleFormControlTextarea4" rows="1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group purple-border">
+            <label for="exampleFormControlTextarea4">Escribe:</label>
+            <div class="form-group shadow-textarea">
+              <textarea class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4"
+                rows="10"></textarea>
+            </div>
+          </div>
+        </section>
+      </div>

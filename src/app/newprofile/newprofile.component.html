@@ -1,0 +1,149 @@
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeIn" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">profile</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="../../assets/img/logo-be.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <h6>ADMINISTRACIÓN</h6>
+        <a class="btn btn-outline-primary back" [routerLink]="['../selecttime']">ESCRIBIR NUEVO RELATO</a>
+        <br>
+        <a class="btn btn-outline-primary back" href="/newprofile#misrelatos" name="misrelatos">MIS RELATOS</a>
+        <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['../tips']">Tip Semanal</a>
+        <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['']">SALIR</a>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <div class="resume-date text-md-right ">
+          <div>
+            <button class="btn btn-outline-primary btn-user" [routerLink]="['../selecttime']">Escribir mi primer relato</button>
+            <button class="btn btn-outline-primary" [routerLink]="['']">Cerrar Sesión</button>
+          </div>
+          <hr>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+
+          <section>
+
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+              <div class="resume-content mr-auto">
+                <h1>BIENVENID@ </h1>
+                <p> Somos una plataforma de escritura creativa para amantes de la literatura. Para todos los niveles desde Principiante
+                  a PRO. Es totalmente gratuito. Entrena y desarrolla tu creatividad y destreza para escribir historias de
+                  ficción. Tus límites serán el tiempo y tu propia imaginación.</p>
+                <!-- <h3 class="mb-0">TITULO</h3> -->
+              </div>
+            </div>
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+              <div class="resume-content mr-auto">
+                <h1>REGLAS DE USO: </h1>
+                <ul>
+                  <li>1. Selecciona el tiempo de qué dispones para tu escrito. ( 5 minutos | 15 minutos | Ilimitado)
+                  </li>
+                  <li>2. Regístrate como autor.
+                    <li>
+                      <li>3. Acepta la propuesta de escritura. Dispones de 2 propuestas / ejercicio.
+                      </li>
+                      <li> 4. Tras publicar tu relato tendrás un tiempo de corrección.
+                      </li>
+                      <li>5. Si es tu deseo, comparte tu obra con quien desees o envíalo para ser valorado por expertos.</li>
+
+                </ul>
+              </div>
+            </div>
+            <!-- Tabla todos relatos publicados -->
+            <h3 class="md-5">MIS RELATOS:</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="table-me table-striped">
+                      <tr>
+                        <th>Nº</th>
+                        <th>Autor</th>
+                        <th>Titulo</th>
+                        <th>Relato</th>
+                        <th>Fecha</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let relatos of arrayRelatosId">
+                        <td>{{relatos.id}}</td>
+                        <td>{{relatos.usuario}}</td>
+                        <td>{{relatos.titulo}}</td>
+                        <td>
+                          <a class="colored" [routerLink]="['/readstory',relatos.id] ">Ir a relato</a>
+                        </td>
+                        <td>{{relatos.fecha | date}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabla todos relatos publicados -->
+            <h3 class="md-5">ÚLTIMOS RELATOS PUBLICADOS:</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="table-me table-striped">
+                      <tr>
+                        <th>Nº</th>
+                        <th>Autor</th>
+                        <th>Categoría</th>
+                        <th>Titulo</th>
+                        <th>Relato</th>
+                        <th>Fecha</th>
+                      </tr>
+                    </thead>
+                    <tbody id="misrelatos">
+                      <tr *ngFor="let relatos of arrayRelatos">
+                        <td>{{relatos.id}}</td>
+                        <td>{{relatos.usuario}}</td>
+                        <td>{{relatos.categoria}}</td>
+                        <td>{{relatos.titulo}}</td>
+                        <td>
+                          <a class="colored" [routerLink]="['/readstory', relatos.id]">Ir a relato</a>
+                        </td>
+                        <td>{{relatos.fecha | date}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </section>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>

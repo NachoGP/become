@@ -1,0 +1,17 @@
+#becamoawriter{
+   padding-bottom: 10%;
+}
+#becamoawriter .container img{
+   width: 220px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   padding: 2%;
+}
+.center-block img{
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   background-position: center;
+   background-size: cover;
+}

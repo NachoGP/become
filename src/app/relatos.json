@@ -1,0 +1,34 @@
+{
+    "relatos-escritos":  [
+        {
+            "id": 1,
+            "autor": "Ignacio Giralte",
+            "titulo": "Ena tarde como otra cualquiera",
+            "fecha": "12/01/18",
+            "categoria": "5 min"
+        },
+        {
+            "id": 2,
+            "autor": "Manuel Jimenez",
+            "titulo": "En nombre de Rosa",
+            "fecha": "22/05/18",
+            "categoria": "15 min"
+        },
+        {
+            "id": 3,
+            "autor": "Ignacio Giralte",
+            "titulo": "Todo o nada",
+            "fecha": "08/08/18",
+            "categoria": "15 min"
+        },
+        {
+            "id": 4,
+            "titulo": "Sin noticias de Mr. Scott",
+            "autor": "Bernabé Martín",
+            "fecha": "16/04/17",
+            "categoria": "ilimitado"
+
+        }
+    ]
+}
+    

@@ -1,0 +1,198 @@
+/* RESET */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET */
+img{
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+
+p,a,h1,h2,h3,ul,span{
+font-family: 'Nunito', sans-serif;
+}
+ul{
+   line-height: 2;
+}
+body{
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+
+}
+.container {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   margin-right: -15px;
+   margin-left: -15px;
+}
+
+section h2.section-heading {
+   font-size: 20px;
+   margin-top: 2em;
+   margin-bottom: 2em;
+   color:#BD10E0;
+
+}
+section ul{
+   margin-left: 10%;
+}
+span.enfasis{
+   color: #BD10E0;
+}
+
+:root{
+  --main-background-deg: linear-gradient(to right, rgba(49,35,174,1) 0%, rgba(201,109,215,1) 100%); 
+}
+hr{
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/*clear*/
+.clear-fix:after{
+  clear:both;
+  content:'';
+  display: block;
+  height: 0;
+  }
+
+/*animaciones*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.slow {
+  -webkit-animation-duration: 3.2s;
+  animation-duration: 3.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@media (max-width:1024px){
+
+   header.masthead .intro-text .intro-heading{
+         display: none;
+         visibility: hidden;
+   }
+  .navbar-collapse li a{
+     text-align: center;
+     display: flex;
+     justify-content: center;
+
+  }
+  .navbar-collapse li a img{
+    width:90% !important;
+    padding: 2em 0;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  header .container .intro-text .hero-button{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+  }
+  header .container .intro-text .hero-button a{
+     flex-wrap: wrap;
+     font-size: 10px;
+  }
+
+}
+
+@media (min-width:768px) and (max-width:1024px){
+
+   .navbar-collapse li a img{
+      width:200px !important;
+      padding: auto;
+
+    }
+
+
+
+}
