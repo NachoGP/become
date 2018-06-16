@@ -30,15 +30,18 @@
                 <p class="error-forms-styles">El nombre es requerido<p>
               </div>
               
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password (min. 6 caracteres)" required formControlName="password">
+              <input type="password" id="inputPassword" class="form-control" placeholder="contraseña (min. 6 caracteres)" required formControlName="password">
               <div *ngIf="form.controls.password.dirty && form.controls.password.errors?.required">
                   <p class="error-forms-styles">La contraseña es obligatoria<p>
               </div>
 
-              <input type="password" id="repeatPassword" class="form-control" placeholder="Repetir password" required formControlName="repeatpassword">
-              
-              <!-- <div *ngIf="form.controls.password == form.controls.repeatpassword ==equal">
-                  <p class="error-forms-styles">La contraseña es obligatoria<p> -->
+              <input type="password" id="repeatPassword" class="form-control" placeholder="Repetir contraseña" required formControlName="password2">
+              <div *ngIf="form.controls.password2.dirty && form.controls.password2.errors?.required ">
+                  <p class="error-forms-styles">Las contraseñas es obligatoria<p> 
+                    </div>
+              <div *ngIf="form.controls.password === form.controls.password2">
+              <p [hidden]class="error-forms-styles">Las contraseñas deben coincidir<p>
+              </div>
 
               <select class="form-control" id="FormControlSelectPais" formControlName="country">
                   <option value="AF">Afghanistan</option>
@@ -295,7 +298,7 @@
               <div *ngIf="form.controls.city.dirty && form.controls.city.errors?.required">
                   <p class="error-forms-styles">Este campo es requerido<p>
               </div>
-              <button class="btn btn-lg btn-block" type="submit" [disabled]="!form.valid">Registrarme</button>
+              <button (cliCk)="registrarme()"class="btn btn-lg btn-block" type="submit" [disabled]="!form.valid">Registrarme</button>
     
               <br>
               <div class="form-check">

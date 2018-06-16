@@ -32,7 +32,7 @@ export class SelecttimeComponent implements OnInit {
     this.isActive = false;
     this.isActive2 = false;
     this.isActive3 = true;
-    this.tiempo = -1
+    this.tiempo = "∞"
   }
 
 

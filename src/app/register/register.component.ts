@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms'
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +10,9 @@ import {FormGroup, FormControl, Validators} from '@angular/forms'
 })
 export class RegisterComponent implements OnInit {
   form: any;
-  constructor() { }
+  comprobarPass:any;
+  
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -20,9 +24,9 @@ export class RegisterComponent implements OnInit {
                                     Validators.minLength(6),
                                     Validators.required
       ])),
-      repeatpassword: new FormControl('', Validators.compose([
+      password2: new FormControl('', Validators.compose([
                                     Validators.minLength(6),
-                                    Validators.required                       
+                                    Validators.required                
       ])),
       country: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
@@ -32,6 +36,26 @@ export class RegisterComponent implements OnInit {
    onSubmit(){
      console.log( this.form.value);
    }
+
+  //  comprobarPass(){
+  //    if(this.form.password === this.form.password2){
+  //     this.comprobarPass= true;
+  //       console.log(comprobarPass);
+  //    }else{
+  //     this.comprobarPass= false;
+  //      console.log(comprobarPass);
+       
+  //    }
+  //  }
+
+registrarme(){
+
+
+  this.router.navigate(['/newprofile'])
+
+}
+
+
 
 
    }
