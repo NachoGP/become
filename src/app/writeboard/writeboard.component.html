@@ -45,8 +45,8 @@
         <div class="resume-date text-md-right">
           <!-- timer -->
           <div class="results row col-12">
-            <button class="btn btn-outline-primary rev" [routerLink]="['../newprofile']">MI AREA PRIVADA</button>
-            <button class="btn btn-outline-primary rev">GUARDAR</button>
+            <button class="btn btn-outline-primary rev" [routerLink]="['/newprofile']">MI AREA PRIVADA</button>
+            <button (click)="guardarRelato()" type="submit "class="btn btn-outline-primary rev">GUARDAR</button>
           </div>
           <div class="timer-design pad">
             <h3>{{tiempo}} min</h3>
@@ -60,7 +60,7 @@
               <div class="subheading mb-3">
                 <div class="form-group purple-border">
                   <div class="form-group shadow-textarea">
-                    <input class="form-control z-depth-1" id="exampleFormControlTextarea4" rows="1">
+                    <input [(ngModel)]="relato.titulo"class="form-control z-depth-1" id="exampleFormControlTextarea4" rows="1">
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
           <div class="form-group purple-border">
             <label for="exampleFormControlTextarea4">Escribe:</label>
             <div class="form-group shadow-textarea">
-              <textarea class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4"
+              <textarea [(ngModel)]="relato.relato"class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4"
                 rows="10"></textarea>
             </div>
           </div>

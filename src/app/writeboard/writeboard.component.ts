@@ -1,15 +1,20 @@
-import { RelatoservicesService } from './../relatoservices.service';
+
+import { RelatoservicesService } from '../relatoservices.service';
+import { UserService } from '../user.service';
+import { Relato } from './../interface.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-writeboard',
   templateUrl: './writeboard.component.html',
-  styleUrls: ['./writeboard.component.css']
+  styleUrls: ['./writeboard.component.css'],
+  providers: [UserService]
 })
 export class WriteboardComponent implements OnInit {
 
-  propuesta: any
+propuesta: any;
 tiempo:any;
+
 
   constructor(private propuesta1: RelatoservicesService, private propuesta2: RelatoservicesService) { }
 
@@ -20,5 +25,21 @@ tiempo:any;
 
        this.tiempo = JSON.parse(localStorage.getItem('tiempo'));
        console.log(this.propuesta.tiempo); 
+
+      }
+
+  relato:Relato = {
+    titulo:"",
+    relato:""
   }
+
+
+
+guardarRelato(){
+  console.log(this.propuesta)
+  console.log(this.tiempo)
+  console.log(this.relato)
+}
+
+
 }
