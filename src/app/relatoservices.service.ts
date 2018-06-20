@@ -13,9 +13,9 @@ export class RelatoservicesService {
     return this.http.get(url).toPromise()
 
   }
-
-  pedirRelatosbyId(){
-    let url = 'http://localhost:3000/api/relato/show2/byid'
+  pedirRelatosbyId(id){
+    let url = 'http://localhost:3000/api/relato/autor/'+id
+    console.log(url)
     return this.http.get(url).toPromise()
 
   }
@@ -30,7 +30,6 @@ export class RelatoservicesService {
     return this.http.get(url).toPromise()
   }
   
-  
   pedirPropuesta1(){
     let url = 'http://localhost:3000/api/propuestas/prop1rand'
     return this.http.get(url).toPromise()
@@ -43,6 +42,9 @@ export class RelatoservicesService {
 
   }
 
+  guardarRelato(){
+    let url = 'http://localhost:3000/api/relato/readstory/create'
+    return this.http.get(url).toPromise()
+  }
+
 }
-// https://becomeawriter-29781.firebaseio.com/relatos-escritos.json
-//http://localhost:3000/api/relato/show/bydate

@@ -74,8 +74,8 @@
                     <thead class="table-me table-striped">
                       <tr>
                         <th>Nº</th>
-                        <th>Autor</th>
                         <th>Titulo</th>
+                        <th>Propuesta</th>
                         <th>Relato</th>
                         <th>Fecha</th>
                       </tr>
@@ -83,8 +83,8 @@
                     <tbody>
                       <tr *ngFor="let relatos of arrayRelatosId">
                         <td>{{relatos.id}}</td>
-                        <td>{{relatos.usuario}}</td>
                         <td>{{relatos.titulo}}</td>
+                        <td>{{relatos.propuesta}}</td>
                         <td>
                           <a class="colored" [routerLink]="['/readstory',relatos.id] ">Ir a relato</a>
                         </td>

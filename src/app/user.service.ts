@@ -14,17 +14,5 @@ export class UserService {
 
   }
 
-  // guardaruevoRelato(){
-  //   let url: 'http://localhost:3000/api/relato/show/bydate'
-  //   this.http.post(url,{
-
-
-  //   })
-  //   .subscribe(res =>{
-
-  //   })
-
- 
-  // }
 }
 

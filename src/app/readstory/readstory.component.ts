@@ -12,10 +12,13 @@ import { Component, OnInit } from '@angular/core';
 export class ReadstoryComponent implements OnInit {
 
   arrayRelatoUno:any;
+  arrayRelatosId:any;
   countRelatos:any;
   id:any;
+  propuesta: any;
+  tiempo:any;
 
-  constructor( private relatoservices : RelatoservicesService, private activatedRoute: ActivatedRoute) { 
+  constructor( private relatoservices : RelatoservicesService, private relatos : RelatoservicesService, private activatedRoute: ActivatedRoute) { 
    
     this.activatedRoute.params.subscribe( params => {
         console.log(params.id)
@@ -24,18 +27,36 @@ export class ReadstoryComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.propuesta = JSON.parse(localStorage.getItem('propuesta'));
+    console.log(this.propuesta.tipo);
+
+
     // console.log(this.id)
     this.relatoservices.pedirunRelato(this.id)
       .then((res) => {
-        console.log(res.json())
-        this.arrayRelatoUno = res.json();
+        
+        this.arrayRelatoUno = res.json()[0];
+        console.log(this.arrayRelatoUno);
+        
       })
 
     this.relatoservices.mostrarRelatosporUsuario(this.id)
       .then((res) => {
-        console.log(res.json())
+        // console.log(res.json())
         this.countRelatos = res.json().total;
       })
+
+      this.relatos.pedirRelatosbyId(this.id)
+      .then( (res) => {
+        // console.log(res.json())
+        this.arrayRelatosId = res.json();
+        // console.log(this.arrayRelatosId);
+        
+  
+        // console.log(res.json())
+      })
+
+
 
   }
 

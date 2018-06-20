@@ -18,6 +18,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
+          <h3 class="theme-proposal"> Tu Propuesta</h3>
+          <h4>GÉNERO:</h4>
+          <p class="theme-selector">{{arrayRelatoUno.propuesta}}</p>
         <a class="btn btn-outline-primary back" [routerLink]="['/newprofile']">VOLVER</a>
       </ul>
     </div>
@@ -30,7 +33,7 @@
         <h3>BIENVENIDO</h3>
         <p>Nº de relatos que llevas escritos: {{countRelatos}}</p>
         
-        <h3 *ngFor="let relato of arrayRelatoUno">Categoria: {{relato.categoria}} </h3>
+        <h3>Categoria: {{arrayRelatoUno.categoria}} </h3>
         <div class="resume-date text-md-right ">
 
 
@@ -50,7 +53,7 @@
               <div class="subheading mb-3">
                 <div class="form-group purple-border">
                   <div class="form-group shadow-textarea">
-                        <article *ngFor="let relato of arrayRelatoUno">{{relato.titulo}}</article>
+                        <article>{{arrayRelatoUno.titulo}}</article>
                   </div>
                 </div>
               </div>
@@ -60,7 +63,7 @@
             <div class="form-group shadow-textarea">
               <section class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4"
                 rows="10"><br>
-                <p *ngFor="let relato of arrayRelatoUno" class="paragraph-story">{{relato.relato}}</p>
+                <p class="paragraph-story">{{arrayRelatoUno.relato}}</p>
                 
                     </section>
             </div>

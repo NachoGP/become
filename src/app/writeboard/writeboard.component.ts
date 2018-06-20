@@ -25,20 +25,16 @@ tiempo:any;
 
        this.tiempo = JSON.parse(localStorage.getItem('tiempo'));
        console.log(this.propuesta.tiempo); 
-
       }
-
   relato:Relato = {
     titulo:"",
     relato:""
   }
 
-
-
 guardarRelato(){
-  console.log(this.propuesta)
-  console.log(this.tiempo)
-  console.log(this.relato)
+  // console.log(this.propuesta)
+  // console.log(this.tiempo)
+  // console.log(this.relato)
 }
 
 
