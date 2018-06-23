@@ -1,22 +1,22 @@
 
 import { RelatoservicesService } from '../relatoservices.service';
-import { UserService } from '../user.service';
 import { Relato } from './../interface.interface';
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-writeboard',
   templateUrl: './writeboard.component.html',
-  styleUrls: ['./writeboard.component.css'],
-  providers: [UserService]
+  styleUrls: ['./writeboard.component.css']
 })
 export class WriteboardComponent implements OnInit {
 
 propuesta: any;
 tiempo:any;
+relatoinfo:any;
 
+  constructor(private relatosService: RelatoservicesService, private router: Router) { 
 
-  constructor(private propuesta1: RelatoservicesService, private propuesta2: RelatoservicesService) { }
+  }
 
   ngOnInit() {
     
@@ -26,16 +26,29 @@ tiempo:any;
        this.tiempo = JSON.parse(localStorage.getItem('tiempo'));
        console.log(this.propuesta.tiempo); 
       }
+
   relato:Relato = {
     titulo:"",
-    relato:""
+    texto:""
   }
 
-guardarRelato(){
-  // console.log(this.propuesta)
-  // console.log(this.tiempo)
-  // console.log(this.relato)
-}
+  handleClickGuardar(){
+    let relatoinfo = { 
+      titulo:this.relato.titulo,
+      tiempo: this.tiempo,
+      relato:this.relato.texto,
+      propuesta: this.propuesta.objeto,
 
+    }
+    
+   this.relatosService.guardarRelato(relatoinfo)
+   .then( (res) => {
+    console.log(res.json())
+  
+  })
 
+  this.router.navigate(['/newprofile'])
+ 
+
+  }
 }

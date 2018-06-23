@@ -3,6 +3,9 @@ footer{
    margin: 1em;
 
 }
+ul.list-inline.quicklinks a{ 
+font-size:12px;
+}
 ul.list-inline.quicklinks.quicklinks, span{
 font-size: 10px;
 color: #BD10E0;
@@ -13,4 +16,7 @@ line-height: 45px
 
 .fa{
    margin: 1em ;
+}
+.quicklinks{
+font-size:12px;
 }

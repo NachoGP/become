@@ -1,7 +1,8 @@
-
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -10,55 +11,51 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   form: any;
-  comprobarPass:any;
-  
-  constructor(private router: Router) { }
+  comprobarPass: any;
+  userinfo: any;
+
+  constructor(private router: Router, private usuarioService: UserService) { }
 
   ngOnInit() {
 
     this.form = new FormGroup({
-      username: new FormControl('', Validators.compose([
-                                    Validators.required
+      usuario: new FormControl('', Validators.compose([
+        Validators.required
       ])),
       password: new FormControl('', Validators.compose([
-                                    Validators.minLength(6),
-                                    Validators.required
-      ])),
-      password2: new FormControl('', Validators.compose([
-                                    Validators.minLength(6),
-                                    Validators.required                
+        Validators.minLength(6),
+        Validators.required
       ])),
       country: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
       check: new FormControl('', Validators.required)
-    })    
+    })
   }
-   onSubmit(){
-     console.log( this.form.value);
-   }
+  onSubmit() {
+     console.log(this.form.value);
+    let userinfo = {
+      usuario: this.form.value.usuario,
+      password: this.form.value.password,
+      country: this.form.value.country,
+      city: this.form.value.city
+    }
+    this.usuarioService.guardarUsuario(userinfo)
+      .then((res) => {
+        console.log(res.json())
+      })
+    console.log("Registro ok");
+    alert("Gracias por registrarte en BECOME A WRITER")
+    this.router.navigate(['/login'])
 
-  //  comprobarPass(){
-  //    if(this.form.password === this.form.password2){
-  //     this.comprobarPass= true;
-  //       console.log(comprobarPass);
-  //    }else{
-  //     this.comprobarPass= false;
-  //      console.log(comprobarPass);
-       
-  //    }
-  //  }
 
-registrarme(){
+  
 
 
-  this.router.navigate(['/newprofile'])
 
+
+
+  }
 }
-
-
-
-
-   }
 
 
 

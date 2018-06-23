@@ -1,13 +1,15 @@
 #map{
    padding-bottom: 5%;
 }
-
-.map{
+agm-map {
+   height: 400px;
    width: 100%;
-   background: blueviolet;
-   opacity: 0.55;
-   
-}
+  
+ }
+.mapping{
+  border-radius: 6px;
+  border: 4px solid #f2f2f2;
+ }
 .back-deg{
    background: var(--main-background-deg);
    background-position: center;

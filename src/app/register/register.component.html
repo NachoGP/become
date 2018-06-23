@@ -24,9 +24,9 @@
             (ngSubmit)="onSubmit(form.value)"
             novalidate class="form-signin square-form animated fadeIn">
               <h2 class="form-signin-heading">Regístrate y comienza a escribir historias de ficción: </h2>
-              <input type="name" id="inputUsername" class="form-control" placeholder="Usuario" required autofocus formControlName="username">
+              <input type="name" id="inputUsername" class="form-control" placeholder="Nombre de usuario" required autofocus formControlName="usuario">
 
-              <div *ngIf="form.controls.username.dirty && form.controls.username.errors?.required">
+              <div *ngIf="form.controls.usuario.dirty && form.controls.usuario.errors?.required">
                 <p class="error-forms-styles">El nombre es requerido<p>
               </div>
               
@@ -34,15 +34,6 @@
               <div *ngIf="form.controls.password.dirty && form.controls.password.errors?.required">
                   <p class="error-forms-styles">La contraseña es obligatoria<p>
               </div>
-
-              <input type="password" id="repeatPassword" class="form-control" placeholder="Repetir contraseña" required formControlName="password2">
-              <div *ngIf="form.controls.password2.dirty && form.controls.password2.errors?.required ">
-                  <p class="error-forms-styles">Las contraseñas es obligatoria<p> 
-                    </div>
-              <div *ngIf="form.controls.password === form.controls.password2">
-              <p [hidden]class="error-forms-styles">Las contraseñas deben coincidir<p>
-              </div>
-
               <select class="form-control" id="FormControlSelectPais" formControlName="country">
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
@@ -298,22 +289,22 @@
               <div *ngIf="form.controls.city.dirty && form.controls.city.errors?.required">
                   <p class="error-forms-styles">Este campo es requerido<p>
               </div>
-              <button (cliCk)="registrarme()"class="btn btn-lg btn-block" type="submit" [disabled]="!form.valid">Registrarme</button>
-    
+        <!-- <p class="theme-selector">{{propuesta.objeto.personaje}}</p> -->
+              <button class="btn btn-lg btn-block" type="submit" [disabled]="!form.valid">Registrarme</button>
               <br>
               <div class="form-check">
-                  <div *ngIf="form.controls.check.errors?.required">
-                      <p class="error-forms-styles">Por favor, acepta la política de privacidad<p>
-                        </div>
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="check">
+                  <div *ngIf="form.controls.check.errors?.required" class="privacy-block">
                   
-                 
-                  
-                  <label class="form-check-label" for="exampleCheck1">Tranquilo no compartimos datos con nadie.;-) </label>
+                  </div>
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="check">  
+                 <p class="error-forms-styles">Por favor, acepta la política de privacidad<p>
                 </div>
+             
+                <br>
+                <span class="yasoy" >¡YA SOY MIEMBRO!</span><a class="yasoy btn btn-lg btn-block yasoy-b " [routerLink]="['/login']">Acceder</a>
             </form>
   
-  
+           
           </div>
         </div>
       </div>

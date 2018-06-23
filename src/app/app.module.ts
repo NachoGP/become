@@ -13,7 +13,11 @@ import { appRoutes  } from './app.routing';
 //Servicios
 import { HttpModule } from '@angular/http';
 import { UserService } from './user.service';
+import { RelatoservicesService } from './relatoservices.service';
 
+//Maps
+
+import { AgmCoreModule } from '@agm/core';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -33,6 +37,7 @@ import { ProposalComponent } from './proposal/proposal.component';
 import { NewprofileComponent } from './newprofile/newprofile.component';
 import { TipsComponent } from './tips/tips.component';
 import { ReadstoryComponent } from './readstory/readstory.component';
+import { PoliticaComponent } from './politica/politica.component';
 
 
 @NgModule({
@@ -53,10 +58,14 @@ import { ReadstoryComponent } from './readstory/readstory.component';
     ProposalComponent,
     NewprofileComponent,
     TipsComponent,
-    ReadstoryComponent
+    ReadstoryComponent,
+    PoliticaComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes),HttpModule, FormsModule, ReactiveFormsModule
+    BrowserModule, RouterModule.forRoot(appRoutes),HttpModule, FormsModule, ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAMdDkzmwls6vCB-pToZz4XlVucmVZ8LI8'
+    })
   ],
   providers: [
     { provide:LOCALE_ID, useValue: 'es'}, UserService 

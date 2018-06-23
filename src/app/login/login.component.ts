@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
-import { Router} from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -11,38 +11,39 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
 
-  target : any;
+  target: any;
   form: any;
-  preventDefault:any;
- password:any;
- name:any;
-  constructor(private router: Router, private user:UserService) { }
+  preventDefault: any;
+  password: any;
+  usuario: any;
+  useraccess: any;
+  constructor(private router: Router, private user: UserService) { }
 
   ngOnInit() {
 
     this.form = new FormGroup({
-      username: new FormControl('', Validators.compose([
+      usuario: new FormControl('', Validators.compose([
         Validators.required
       ])),
-      password: new FormControl('', Validators.required)
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(6),
+        Validators.required
+      ])),
 
     })
   }
   //  onSubmit(){
   //    console.log( this.form.value);
   //  }
- onSubmit(){
- 
+//   onSubmit() {
+//     console.log(this.form.value);
+//     let useraccess = {
+//       usuario: this.form.value.usuario,
+//       password: this.form.value.password
+//     }
       
-    //  if(name =='cio' && password =='neoland'){
-    //   this.user.setUserLoggedIn();
-    //   this.router.navigate(['newprofile']);
-
-    //  }
-
-     
-   
-   }
-
-
-  }
+//       this.user.AccesoUsuario(useraccess)
+//         .then((res) => {
+//           console.log(res.json())
+//         })  
+ }

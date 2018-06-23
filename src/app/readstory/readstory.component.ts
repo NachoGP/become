@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-
+let jQuery: any;
 import { RelatoservicesService } from './../relatoservices.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -25,11 +25,12 @@ export class ReadstoryComponent implements OnInit {
         this.id=params.id;
     })
   }
+ 
 
   ngOnInit() {
     this.propuesta = JSON.parse(localStorage.getItem('propuesta'));
     console.log(this.propuesta.tipo);
-
+    
 
     // console.log(this.id)
     this.relatoservices.pedirunRelato(this.id)

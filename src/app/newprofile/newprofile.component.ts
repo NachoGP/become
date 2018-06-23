@@ -27,7 +27,6 @@ export class NewprofileComponent implements OnInit {
         console.log(res.json())
         this.arrayRelatos = res.json();
   
-        // console.log(res.json())
       })
     
     this.relatos.pedirRelatosbyId(this.id)
@@ -35,8 +34,6 @@ export class NewprofileComponent implements OnInit {
         console.log(res.json())
         this.arrayRelatosId = res.json();
         
-  
-        // console.log(res.json())
       })
   
   }

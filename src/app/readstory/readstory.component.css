@@ -3,7 +3,9 @@ body {
    padding-top: 54px;
    color: #868e96;
  }
- 
+ .collapse {
+  display: none;
+ }
  img{
    max-width: 50%;
  }
@@ -43,8 +45,10 @@ body {
    font-size: 3.5rem;
  }
  h4{
-    color:white;
+    color: #ba68c8;
+    text-align: left;
  }
+
  .back{
     color: white;
  }
@@ -58,7 +62,9 @@ body {
    font-family: 'Nunito', serif;
    font-size: 1.35rem;
  }
- 
+ .propuesta-marco{
+   border: 1px dashed rgb(80, 90, 236);
+ }
  .list-social-icons a {
    color: #f2f2f2;
  }

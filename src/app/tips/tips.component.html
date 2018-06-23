@@ -1,3 +1,98 @@
-<p>
-  tips works!
-</p>
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeIn" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">profile</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="../../assets/img/logo-be.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <h6>ADMINISTRACIÓN</h6>
+        <a class="btn btn-outline-primary back" [routerLink]="['../selecttime']">ESCRIBIR NUEVO RELATO</a>
+        <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['/newprofile']">VOLVER A MENÚ</a>
+        <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['']">SALIR</a>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+
+          <section>
+
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+              <div class="resume-content mr-auto">
+                <h3 class="md-5">FRASE DE LA SEMANA:</h3>
+                <p id="quote">“He aprendido a no intentar convencer a nadie. El trabajo de convencer es una falta de respeto, es un intento
+                  de colonización del otro.”(José Saramago)</p>
+                <!-- <h3 class="mb-0">TITULO</h3> -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="table-me table-striped">
+                      <tr>
+                        <th>Consejos prácticos: </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row-clear"></div>
+      <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="../../assets/img/tip-1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"> 3 CONSEJOS PARA UN BUEN COMIENZO</h5>
+      
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">21 Junio. 2018</small>
+            </div>
+              <button class="btn btn-outline-primary corporative-button" [routerLink]="['']">Seguir Leyendo</button>
+            
+          </div>
+            <br>
+          <div class="card">
+              <img class="card-img-top" src="../../assets/img/tip-2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">EL PERSONAJE: CENTRO DE LA FICCIÓN</h5>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">28 Mayo. 2018</small>
+            </div>
+              <button class="btn btn-outline-primary corporative-button" [routerLink]="['']">Seguir Leyendo</button>
+           
+          </div>
+          <br>
+          <div class="card">
+              <img class="card-img-top" src="../../assets/img/tip-3.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">ACERTAR CON LOS FINALES</h5>
+            </div>
+            
+            <div class="card-footer">
+              <small class="text-muted">12 Abril. 2018</small>
+            </div>
+            <button class="btn btn-outline-primary corporative-button" [routerLink]="['']">Seguir Leyendo</button>
+          </div>
+        </div>
+    
+ 
+        <!-- //Termina cards -->

@@ -9,6 +9,7 @@ import { RegisterComponent} from './register/register.component';
 import { ProposalComponent } from './proposal/proposal.component';
 import { NewprofileComponent } from './newprofile/newprofile.component';
 import { TipsComponent } from './tips/tips.component';
+import { PoliticaComponent } from './politica/politica.component';
 
 export const appRoutes: Routes = [
     { path: '', component: MainComponent }, 
@@ -20,6 +21,7 @@ export const appRoutes: Routes = [
     { path: 'readstory/:id', component:ReadstoryComponent},
     { path: 'tips', component:TipsComponent},
     { path: 'writeboard', component:WriteboardComponent},
+    { path: 'politica', component:PoliticaComponent},
     { path: '**', component: MainComponent }
 ]
    

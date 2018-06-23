@@ -1,8 +1,6 @@
 <body id="page-top main-container">
   <div class=" p-3 p-lg-5 d-flex flex-column ">
-    <div class=" pull-right">
-      <button class="btn btn-outline-primary col-2 col-xs-12 session-button pad" [routerLink]="['']">Cerrar Sesión</button>
-    </div>
+
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeIn" id="sideNav">
@@ -18,10 +16,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-          <h3 class="theme-proposal"> Tu Propuesta</h3>
-          <h4>GÉNERO:</h4>
-          <p class="theme-selector">{{arrayRelatoUno.propuesta}}</p>
-        <a class="btn btn-outline-primary back" [routerLink]="['/newprofile']">VOLVER</a>
+          <a class="btn btn-outline-primary back" [routerLink]="['/selecttime']">ESCRIBIR NUEVO</a>
+          <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['/newprofile']">VOLVER a MENÚ</a>
+        <br>
+        <a class="btn btn-outline-primary back" [routerLink]="['']">CERRAR SESIÓN</a>
       </ul>
     </div>
   </nav>
@@ -30,30 +29,28 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
       <div class="my-auto">
-        <h3>BIENVENIDO</h3>
-        <p>Nº de relatos que llevas escritos: {{countRelatos}}</p>
-        
-        <h3>Categoria: {{arrayRelatoUno.categoria}} </h3>
-        <div class="resume-date text-md-right ">
+   
+        <h3>Categoria: {{arrayRelatoUno.categoria}} minutos</h3>
+ <br>
+        <div class="resume-date text-md-left">
 
-
-          <!-- timer -->
-
-          <!-- timer -->
-          <div class="results row col-12">
-            <button class="btn btn-outline-primary rev" [routerLink]="['/newprofile']">MI AREA PRIVADA</button>
+          <div class="row col-12">
+             
+            <div class="alert animated fadeIn slow propuesta-marco" role="alert">
+                <h4>PROPUESTA ORIGINAL DEL RELATO:</h4>
+              {{arrayRelatoUno.propuesta}}
+            </div>
           </div>
-
           <hr>
         </div>
         <section>
           <div class="resume-item d-flex flex-column flex-md-row mb-5 col-10">
             <div class="resume-content">
-              <h3 class="mb-0">TITULO</h3>
+              <h3 class="mb-0">TITULO:</h3>
               <div class="subheading mb-3">
                 <div class="form-group purple-border">
                   <div class="form-group shadow-textarea">
-                        <article>{{arrayRelatoUno.titulo}}</article>
+                    <article>{{arrayRelatoUno.titulo}}</article>
                   </div>
                 </div>
               </div>
@@ -61,13 +58,15 @@
           </div>
           <div class="form-group purple-border">
             <div class="form-group shadow-textarea">
-              <section class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4"
-                rows="10"><br>
+              <section class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..." id="exampleFormControlTextarea4" rows="10">
+                <br>
                 <p class="paragraph-story">{{arrayRelatoUno.relato}}</p>
-                
-                    </section>
+              </section>
             </div>
           </div>
           <button class="btn btn-outline-primary rev" [routerLink]="['/newprofile']">SALIR</button>
         </section>
+
+
+        <!-- <script>$('.collapse').collapse()</script> -->
       </div>

@@ -9,7 +9,7 @@ export class SelecttimeComponent implements OnInit {
 
   tiempo:any
 
-  isActive = true;
+  isActive = false;
   isActive2 = false;
   isActive3 = false;
  
